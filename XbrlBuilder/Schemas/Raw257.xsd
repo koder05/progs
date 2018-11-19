@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name='root'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name='row' maxOccurs='unbounded' minOccurs='0'>
+          <xs:complexType>
+            <xs:sequence>
+              <!-- ID -->
+              <xs:element name='F0' maxOccurs='1' minOccurs='1' type='xs:string' />
+              <!-- fund -->
+              <xs:element name='F1' maxOccurs='1' minOccurs='1' type='xs:string' />
+              <!-- lic num -->
+              <xs:element name='F2' maxOccurs='1' minOccurs='1' type='xs:string' />
+              <!-- IPA -->
+              <xs:element name='F3' maxOccurs='1' minOccurs='1' type='xs:string' />
+              <!-- INN -->
+              <xs:element name='F4' maxOccurs='1' minOccurs='0' type='xs:string' />
+              <!-- Birth date -->
+              <xs:element name='F5' maxOccurs='1' minOccurs='1' type='xs:date' />
+              <!-- Gender -->
+              <xs:element name='F6' maxOccurs='1' minOccurs='0'>
+                <xs:simpleType>
+                  <xs:restriction base='xs:string'>
+                    <xs:enumeration value='М'/>
+                    <xs:enumeration value='Ж'/>
+                    <xs:enumeration value='-'/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <!-- Address code -->
+              <xs:element name='F7' maxOccurs='1' minOccurs='1' type='xs:string' />
+              <!-- Account Num -->
+              <xs:element name='F8' maxOccurs='1' minOccurs='1' type='xs:string' />
+              <!-- Agree Date -->
+              <xs:element name='F9' maxOccurs='1' minOccurs='1' type='xs:date' />
+              <!-- Account Status -->
+              <xs:element name='F10' maxOccurs='1' minOccurs='1'>
+                <xs:simpleType>
+                  <xs:restriction base='xs:string'>
+                    <xs:enumeration value='Д'/>
+                    <xs:enumeration value='ДЕ'/>
+                    <xs:enumeration value='ДС'/>
+                    <xs:enumeration value='ДН'/>
+                    <xs:enumeration value='ДСН'/>
+                    <xs:enumeration value='ДСН-1'/>
+                    <xs:enumeration value='ДСН-2'/>
+                    <xs:enumeration value='ДСЕ'/>
+                    <xs:enumeration value='ДСЕ-1'/>
+                    <xs:enumeration value='ДСЕ-2'/>
+                    <xs:enumeration value='ПС'/>
+                    <xs:enumeration value='П'/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <!-- Insured Face Status -->
+              <xs:element name='F11' maxOccurs='1' minOccurs='0'>
+                <xs:simpleType>
+                  <xs:restriction base='xs:string'>
+                    <xs:enumeration value='текущий'/>
+                    <xs:enumeration value='ТЕКУЩИЙ'/>
+                    <xs:enumeration value='ушедший'/>
+                    <xs:enumeration value='УШЕДШИЙ'/>
+                    <xs:enumeration value='пришедший'/>
+                    <xs:enumeration value='ПРИШЕДШИЙ'/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <!-- Insured Face Status Base -->
+              <xs:element name='F12' maxOccurs='1' minOccurs='0'>
+                <xs:simpleType>
+                  <xs:restriction base='xs:string'>
+                    <xs:enumeration value='НПФ'/>
+                    <xs:enumeration value='ПФР'/>
+                    <xs:enumeration value='СМ-НПФ'/>
+                    <xs:enumeration value='СМ-ПФР'/>
+                    <xs:enumeration value='СУД-НПФ'/>
+                    <xs:enumeration value='СУД-ПФР'/>
+                    <xs:enumeration value='СМ'/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <!-- 5-year period begin date -->
+              <xs:element name='F13' maxOccurs='1' minOccurs='1' type='xs:date' />
+              <!-- Agree Close date -->
+              <xs:element name='F14' maxOccurs='1' minOccurs='0' type='xs:date' />
+              <!-- Longlife pens begin date -->
+              <xs:element name='F15' maxOccurs='1' minOccurs='0' type='xs:date' />
+              <!-- TimeFix pens begin date -->
+              <xs:element name='F16' maxOccurs='1' minOccurs='0' type='xs:date' />
+              <!-- TimeOne pens begin date -->
+              <xs:element name='F17' maxOccurs='1' minOccurs='0' type='xs:date' />
+              <!-- TimeFix pens end date -->
+              <xs:element name='F18' maxOccurs='1' minOccurs='0' type='xs:date' />
+              <!-- Death date -->
+              <xs:element name='F19' maxOccurs='1' minOccurs='0' type='xs:date' />
+              <!-- Account saldo -->
+              <xs:element name='F20' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Account saldo OPS -->
+              <xs:element name='F21' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Account saldo Sofin -->
+              <xs:element name='F22' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Account saldo MK -->
+              <xs:element name='F23' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Income from PFR -->
+              <xs:element name='F24' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Income from PFR OPS -->
+              <xs:element name='F25' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Income from PFR Sofin -->
+              <xs:element name='F26' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Income from PFR MK -->
+              <xs:element name='F27' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Income from NPF -->
+              <xs:element name='F28' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Income from NPF OPS -->
+              <xs:element name='F29' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Income from NPF Sofin -->
+              <xs:element name='F30' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Income from NPF MK -->
+              <xs:element name='F31' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Pension paid -->
+              <xs:element name='F32' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Pension paid timefix -->
+              <xs:element name='F33' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Pension paid lifelong -->
+              <xs:element name='F34' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Pension paid timeone -->
+              <xs:element name='F35' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Heirs paid -->
+              <xs:element name='F36' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Invest profit -->
+              <xs:element name='F37' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Invest profit OPS -->
+              <xs:element name='F38' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Invest profit Sofin -->
+              <xs:element name='F39' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Invest profit MK -->
+              <xs:element name='F40' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Paid to PFR\NPF -->
+              <xs:element name='F41' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Paid to PFR\NPF OPS -->
+              <xs:element name='F42' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Paid to PFR\NPF Sofin -->
+              <xs:element name='F43' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Paid to PFR\NPF MK -->
+              <xs:element name='F44' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Other saldo -->
+              <xs:element name='F45' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Trans to Fund reserve -->
+              <xs:element name='F46' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Trans to Account -->
+              <xs:element name='F47' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Trans to Pay reserve -->
+              <xs:element name='F48' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Account saldo on Report date -->
+              <xs:element name='F49' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Account saldo on Report date OPS -->
+              <xs:element name='F50' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Account saldo on Report date Sofin -->
+              <xs:element name='F51' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Account saldo on Report date MK -->
+              <xs:element name='F52' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Invest profit on Report -->
+              <xs:element name='F53' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Invest profit on Report OPS -->
+              <xs:element name='F54' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Invest profit on Report Sofin -->
+              <xs:element name='F55' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Invest profit on Report MK -->
+              <xs:element name='F56' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- GAR compensaton -->
+              <xs:element name='F57' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- GAR refill -->
+              <xs:element name='F58' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- GAR compensaton/refill from reserve -->
+              <xs:element name='F59' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- GAR compensaton/refill from self source -->
+              <xs:element name='F60' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- GAR compensaton/refill from other sources -->
+              <xs:element name='F61' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Lifelong pension on report date -->
+              <xs:element name='F62' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <!-- Timefix pension on report date -->
+              <xs:element name='F63' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="resume">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="XbrlResponsible">
+                <xs:complexType>
+                  <xs:attribute name="fio" type="xs:string" use="required" />
+                  <xs:attribute name="pos" type="xs:string" use="required" />
+                  <xs:attribute name="phone" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="NisResponsible">
+                <xs:complexType>
+                  <xs:attribute name="fio" type="xs:string" use="required" />
+                  <xs:attribute name="pos" type="xs:string" use="required" />
+                  <xs:attribute name="phone" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FormResponsible">
+                <xs:complexType>
+                  <xs:attribute name="fio" type="xs:string" use="required" />
+                  <xs:attribute name="pos" type="xs:string" use="required" />
+                  <xs:attribute name="phone" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CEO">
+                <xs:complexType>
+                  <xs:attribute name="fio" type="xs:string" use="required" />
+                  <xs:attribute name="pos" type="xs:string" use="required" />
+                  <xs:attribute name="phone" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="report">
+                <xs:complexType>
+                  <xs:attribute name="id" type="xs:string" use="required" />
+                  <xs:attribute name="matter" type="xs:string" use="required" />
+                  <xs:attribute name="periodBegin" type="xs:date" use="required" />
+                  <xs:attribute name="periodEnd" type="xs:date" use="required" />
+                  <xs:attribute name="periodPrebegin" type="xs:date" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="fund">
+                <xs:complexType>
+                  <xs:attribute name="okato" type="xs:string" use="required" />
+                  <xs:attribute name="inn" type="xs:string" use="required" />
+                  <xs:attribute name="ogrn" type="xs:string" use="required" />
+                  <xs:attribute name="lic" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="totals" minOccurs="0">
+                <xs:complexType>
+                  <xs:attribute name="lifetimeRes" type="xs:decimal" use="optional" />
+                  <xs:attribute name="lifetimeResOnBegin" type="xs:decimal" use="optional" />
+                  <xs:attribute name="lifetimeResTrans" type="xs:decimal" use="optional" />
+                  <xs:attribute name="npoPaid" type="xs:decimal" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

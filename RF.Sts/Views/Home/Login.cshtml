@@ -1,0 +1,16 @@
+﻿@model RF.WebApp.Models.LoginModel
+@{
+    ViewBag.Title = "Введите свои логин и пароль";
+}
+    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+    {
+        @UiForm.Render(Html, m => m)
+     }
+    @section Scripts {
+        
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+
+    
+

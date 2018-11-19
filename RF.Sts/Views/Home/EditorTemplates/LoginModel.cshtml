@@ -1,0 +1,50 @@
+﻿@model RF.WebApp.Models.LoginModel
+@Html.ValidationSummary(true)
+<fieldset>
+    <table>
+        <tr>
+            <td>@Html.LabelFor(m => m.Login)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.TextBoxFor(m => m.Login)
+                @Html.ValidationMessageFor(m => m.Login, "* Введите логин")
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Password)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password, "* Введите пароль")
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <input type="submit" value="Вход" />
+            <span>
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe)
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            @Html.ActionLink("Не удается войти в личный кабинет?", "Remind", "Account")    
+            </td>
+        </tr>
+    </table>
+</fieldset>

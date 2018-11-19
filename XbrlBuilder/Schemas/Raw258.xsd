@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name='root'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name='row' maxOccurs='unbounded' minOccurs='0'>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name='F0' maxOccurs='1' minOccurs='1' type='xs:string' />
+              <xs:element name='F1' maxOccurs='1' minOccurs='1' type='xs:string' />
+              <xs:element name='F2' maxOccurs='1' minOccurs='1' type='xs:string' />
+              <xs:element name='F3' maxOccurs='1' minOccurs='0' type='xs:string' />
+              <xs:element name='F4' maxOccurs='1' minOccurs='0' type='xs:date' />
+              <xs:element name='F5' maxOccurs='1' minOccurs='0' type='xs:string' />
+              <xs:element name='F6' maxOccurs='1' minOccurs='0' type='xs:string' />
+              <xs:element name='F7' maxOccurs='1' minOccurs='0' type='xs:string' />
+              <xs:element name='F8' maxOccurs='1' minOccurs='0' type='xs:string' />
+              <xs:element name='F9' maxOccurs='1' minOccurs='0' type='xs:date' />
+              <xs:element name='F10' maxOccurs='1' minOccurs='0' type='xs:date' />
+              <xs:element name='F11' maxOccurs='1' minOccurs='0'>
+                <xs:simpleType>
+                  <xs:restriction base='xs:string'>
+                    <xs:enumeration value='М'/>
+                    <xs:enumeration value='Ж'/>
+                    <xs:enumeration value='-'/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name='F12' maxOccurs='1' minOccurs='0' type='xs:string' />
+              <xs:element name='F13' maxOccurs='1' minOccurs='0'>
+                <xs:simpleType>
+                  <xs:restriction base='xs:string'>
+                    <xs:enumeration value='НП'/>
+                    <xs:enumeration value='ВПН'/>
+                    <xs:enumeration value='ПВ'/>
+                    <xs:enumeration value='ПО'/>
+                    <xs:enumeration value='ВС'/>
+                    <xs:enumeration value='ИД'/>
+                    <xs:enumeration value='СМ'/>
+                    <xs:enumeration value='-'/>
+                    <xs:enumeration value='прочие'/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name='F14' maxOccurs='1' minOccurs='0'>
+                <xs:simpleType>
+                  <xs:restriction base='xs:string'>
+                    <xs:enumeration value='фондированная'/>
+                    <xs:enumeration value='не фондированная'/>
+                    <xs:enumeration value='частично фондированная'/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name='F15' maxOccurs='1' minOccurs='0'>
+                <xs:simpleType>
+                  <xs:restriction base='xs:string'>
+                    <xs:enumeration value='фонд'/>
+                    <xs:enumeration value='смешанная'/>
+                    <xs:enumeration value='вкладчик'/>
+                    <xs:enumeration value='участник'/>
+                    <xs:enumeration value='-'/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name='F16' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <xs:element name='F17' maxOccurs='1' minOccurs='0'>
+                <xs:simpleType>
+                  <xs:restriction base='xs:string'>
+                    <xs:enumeration value='период действия пенсионного договора'/>
+                    <xs:enumeration value='1 год в соответствии с пенсионными правилами'/>
+                    <xs:enumeration value='период накопления'/>
+                    <xs:enumeration value='период выплат'/>
+                    <xs:enumeration value='другой период (указать)'/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name='F20' maxOccurs='1' minOccurs='0'>
+                <xs:simpleType>
+                  <xs:restriction base='xs:string'>
+                    <xs:enumeration value='индексация не предусмотрена'/>
+                    <xs:enumeration value='иные показатели'/>
+                    <xs:enumeration value='индекс потребительских цен'/>
+                    <xs:enumeration value='ключевая ставка Банка России'/>
+                    <xs:enumeration value='ставка рефинансирования Банка России'/>
+                    <xs:enumeration value='доходность облигаций/депозитов на рынке'/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name='F21' maxOccurs='1' minOccurs='0' type='xs:string' />
+              <xs:element name='F22' maxOccurs='1' minOccurs='0'>
+                <xs:simpleType>
+                  <xs:restriction base='xs:string'>
+                    <xs:enumeration value='Полное'/>
+                    <xs:enumeration value='Накопительное'/>
+                    <xs:enumeration value='Выплатное'/>
+                    <xs:enumeration value='Нет'/>
+                    <xs:enumeration value='Прочее'/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name='F23' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <xs:element name='F24' maxOccurs='1' minOccurs='0' type='xs:date' />
+              <xs:element name='F25' maxOccurs='1' minOccurs='0'>
+                <xs:simpleType>
+                  <xs:restriction base='xs:string'>
+                    <xs:enumeration value='-'/>
+                    <xs:enumeration value='До исчерпания'/>
+                    <xs:enumeration value='Пожизненно'/>
+                    <xs:enumeration value='Срочно'/>
+                    <xs:enumeration value='Смешанно'/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name='F26' maxOccurs='1' minOccurs='0' type='xs:string' />
+              <xs:element name='F27' maxOccurs='1' minOccurs='0' type='xs:date' />
+              <xs:element name='F28' maxOccurs='1' minOccurs='0' type='xs:date' />
+              <xs:element name='F29' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <xs:element name='F31' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <xs:element name='F32' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <xs:element name='F33' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <xs:element name='F34' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <xs:element name='F35' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <xs:element name='F36' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <xs:element name='F37' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+              <xs:element name='F38' maxOccurs='1' minOccurs='0' type='xs:decimal' />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="resume">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="XbrlResponsible">
+                <xs:complexType>
+                  <xs:attribute name="fio" type="xs:string" use="required" />
+                  <xs:attribute name="pos" type="xs:string" use="required" />
+                  <xs:attribute name="phone" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="NisResponsible">
+                <xs:complexType>
+                  <xs:attribute name="fio" type="xs:string" use="required" />
+                  <xs:attribute name="pos" type="xs:string" use="required" />
+                  <xs:attribute name="phone" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FormResponsible">
+                <xs:complexType>
+                  <xs:attribute name="fio" type="xs:string" use="required" />
+                  <xs:attribute name="pos" type="xs:string" use="required" />
+                  <xs:attribute name="phone" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CEO">
+                <xs:complexType>
+                  <xs:attribute name="fio" type="xs:string" use="required" />
+                  <xs:attribute name="pos" type="xs:string" use="required" />
+                  <xs:attribute name="phone" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="report">
+                <xs:complexType>
+                  <xs:attribute name="id" type="xs:string" use="required" />
+                  <xs:attribute name="matter" type="xs:string" use="required" />
+                  <xs:attribute name="periodBegin" type="xs:date" use="required" />
+                  <xs:attribute name="periodEnd" type="xs:date" use="required" />
+                  <xs:attribute name="periodPrebegin" type="xs:date" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="fund">
+                <xs:complexType>
+                  <xs:attribute name="okato" type="xs:string" use="required" />
+                  <xs:attribute name="inn" type="xs:string" use="required" />
+                  <xs:attribute name="ogrn" type="xs:string" use="required" />
+                  <xs:attribute name="lic" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="totals">
+                <xs:complexType>
+                  <xs:attribute name="lifetimeRes" type="xs:decimal" use="required" />
+                  <xs:attribute name="lifetimeResOnBegin" type="xs:decimal" use="required" />
+                  <xs:attribute name="lifetimeResTrans" type="xs:decimal" use="required" />
+                  <xs:attribute name="npoPaid" type="xs:decimal" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

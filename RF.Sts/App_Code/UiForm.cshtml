@@ -1,0 +1,32 @@
+﻿@using System.Web.Mvc;
+@using System.Web.Mvc.Html;
+@using System.Linq.Expressions;
+@functions
+{
+    public static HelperResult Render<TModel, TItem>(HtmlHelper<TModel> html, Expression<Func<TModel, TItem>> expr)
+    {
+        return DoRender(html.EditorFor(expr));
+    }
+}
+@helper DoRender(MvcHtmlString form)
+    {
+    <table border="0" class="uiform">
+        <tr class="uiform_head">
+            <td class="l">
+            </td><td></td>
+            <td class="r">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                @form
+            </td>
+        </tr>
+        <tr class="uiform_foot">
+            <td class="l">
+            </td><td></td>
+            <td class="r">
+            </td>
+        </tr>
+    </table>
+}
